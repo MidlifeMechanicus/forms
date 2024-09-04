@@ -1,1 +1,11 @@
-Hello, World.
+<div>
+  <p>A form for creating a new user</p>
+  <form action="/somepath" method="post">
+    <input type="text" name="user[username]">
+    <input type="text" name="user[email]">
+    <input type="text" name="user[password]">
+    <%# Need method and action attributes %>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" value="Submit This Form">
+  </form>
+</div>
