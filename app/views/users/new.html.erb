@@ -3,9 +3,9 @@
   <%# The method sets the kind of request being sent to the server.%>
   <form action="/users" method="post" accept-charset="UTF-8">
     <legend>A form for creating a new user</legend>
-    <input type="text" name="user[username]">
-    <input type="email" name="user[email]">
-    <input type="password" name="user[password]">
+    <input type="text" name="username">
+    <input type="email" name="email">
+    <input type="password" name="password">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="submit" value="Submit This Form">
   </form>
