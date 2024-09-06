@@ -4,9 +4,8 @@
   <form action="/users(.:format)" method="post" accept-charset="UTF-8">
     <legend>A form for creating a new user</legend>
     <input type="text" name="user[username]">
-    <input type="text" name="user[email]">
-    <input type="text" name="user[password]">
-    <%# Need method and action attributes %>
+    <input type="email" name="user[email]">
+    <input type="password" name="user[password]">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="submit" value="Submit This Form">
   </form>
