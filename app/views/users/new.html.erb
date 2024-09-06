@@ -1,6 +1,8 @@
 <div>
   <p>A form for creating a new user</p>
-  <form action="/users#create" method="post">
+  <%# The action attribute tells the form where to send the data to be processed. %>
+  <%# The method %>
+  <form action="/users(.:format)" method="post">
     <input type="text" name="user[username]">
     <input type="text" name="user[email]">
     <input type="text" name="user[password]">
