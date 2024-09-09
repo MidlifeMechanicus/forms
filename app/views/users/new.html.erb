@@ -24,7 +24,7 @@
   <%# <%= submit_tag('Submit') %> 
 <%# <% end %> 
 
-<%= form_with(url: "/users", method: "post") do %>
+<!--<%= form_with(url: "/users", method: "post") do %>
   <%= label_tag(:username, "Username:") %>
   <%= text_field_tag(:username) %>
   <%= label_tag(:email, "Email:") %>
@@ -32,4 +32,15 @@
   <%= label_tag(:password, "Password:") %>
   <%= text_field_tag(:password) %>
   <%= submit_tag("Submit This Form") %>
+<% end %>
+In theory, the above works. In practice, however, it does not return the information in a 'nested' format that can be read by the standard creation methods used by the related model. Instead, see below:-->
+
+<%= form_with model: @user do |form| %>
+  <%= form.label(:username, "Username:") %>
+  <%= form.text_field(:username) %>
+  <%= form.label(:email, "Email:") %>
+  <%= form.text_field(:email) %>
+  <%= form.label(:password, "Password:") %>
+  <%= form.text_field(:password) %>
+  <%= form.submit("Submit This Form") %>
 <% end %>
