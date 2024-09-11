@@ -37,11 +37,11 @@ In theory, the above works. In practice, however, it does not return the informa
 
 <%= form_with model: @user do |form| %>
   <%= form.label(:username, "Username:") %>
-  <%= form.text_field(:username) %>
+  <%= form.text_field(:username, placeholder: "Choose something cool!") %>
   <%= form.label(:email, "Email:") %>
-  <%= form.email_field(:email) %>
+  <%= form.email_field(:email, placeholder: "example@gmail.com") %>
   <%= form.label(:password, "Password:") %>
-  <%= form.password_field(:password) %>
+  <%= form.password_field(:password, placeholder: "Memorable but secure!") %>
   <%= form.submit("Submit This Form") %>
 <% end %>
 
