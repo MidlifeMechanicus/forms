@@ -41,6 +41,8 @@ In theory, the above works. In practice, however, it does not return the informa
   <%= form.label(:email, "Email:") %>
   <%= form.text_field(:email) %>
   <%= form.label(:password, "Password:") %>
-  <%= form.text_field(:password) %>
+  <%= form.password_field(:password) %>
   <%= form.submit("Submit This Form") %>
 <% end %>
+
+<%# Requires placeholder values and correct input fields. %>
